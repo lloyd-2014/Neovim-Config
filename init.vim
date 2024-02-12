@@ -19,6 +19,7 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'https://github.com/joukevandermaas/vim-ember-hbs'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
 let g:python3_host_prog = expand('C:\Users\lloyd\AppData\Local\Programs\Python\Python312\python')
 let g:go_highlight_function_calls = 1
@@ -43,6 +44,7 @@ nnoremap <Space>i :GoInfo<CR>
 
 lua << EOF
 -- Your Lua code here
+require('lualine').setup()
 local lspconfig = require("lspconfig")
 local util = require "lspconfig/util"
 local on_attach = function(client, bufnr)
@@ -227,6 +229,7 @@ vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
    },
    capabilities = capabilities
   })
+  lspconfig.tsserver.setup({})
   vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
   vim.api.nvim_set_keymap('n', '<S-Tab>', ':bp<CR>', { noremap = true, silent = true })
 EOF

@@ -2,6 +2,7 @@ My super convoluted neovim config.
 
 Currently supports:
 1. Go
+2. JavaScript
 
 Features include:
 - Directory tree view
@@ -10,6 +11,8 @@ Features include:
 - Syntax highlighting
 - Cool color themes 😎
 - Minimalist startup screen
+- Slick status bar
+- Icons
 
 Quick Commands:
 - :GoInfo (SPACE-i)
