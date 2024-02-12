@@ -236,4 +236,6 @@ EOF
 
 colorscheme carbonfox
 set number
+set laststatus=3
+set cmdheight=0
 "colorscheme catppuccin-mocha catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
