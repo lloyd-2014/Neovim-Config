@@ -10,3 +10,9 @@ Features include:
 - Syntax highlighting
 - Cool color themes 😎
 - Minimalist startup screen
+
+Quick Commands:
+- :GoInfo (<SPACE>-i)
+- :GoDef (<SPACE>-d)
+- Directory tree view (<SPACE>-t)
+- Function pop-up list (<SPACE>-a)
