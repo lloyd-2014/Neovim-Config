@@ -16,6 +16,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'echasnovski/mini.starter'
 Plug 'folke/tokyonight.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'https://github.com/joukevandermaas/vim-ember-hbs'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 call plug#end()
 let g:python3_host_prog = expand('C:\Users\lloyd\AppData\Local\Programs\Python\Python312\python')
 let g:go_highlight_function_calls = 1
@@ -32,6 +35,12 @@ set foldcolumn=0
 set signcolumn=no
 set modifiable
 set nowrap
+
+nnoremap <Space>a :AerialNavToggle<CR>
+nnoremap <Space>t :NvimTreeToggle<CR>
+nnoremap <Space>d :GoDef<CR>
+nnoremap <Space>i :GoInfo<CR>
+
 lua << EOF
 -- Your Lua code here
 local lspconfig = require("lspconfig")
@@ -71,6 +80,9 @@ require('catppuccin').setup({
 	},
 })
 require('mini.starter').setup()
+vim.opt.termguicolors = true
+require("bufferline").setup{}
+
 -- You probably also want to set a keymap to toggle aerial
 vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
 -- Set up nvim-cmp.
@@ -219,4 +231,6 @@ vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
   vim.api.nvim_set_keymap('n', '<S-Tab>', ':bp<CR>', { noremap = true, silent = true })
 EOF
 
-colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+colorscheme carbonfox
+set number
+"colorscheme catppuccin-mocha catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
