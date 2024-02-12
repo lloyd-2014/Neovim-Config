@@ -9,3 +9,4 @@ Features include:
 - Code completion
 - Syntax highlighting
 - Cool color themes 😎
+- Minimalist startup screen
