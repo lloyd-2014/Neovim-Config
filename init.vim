@@ -83,7 +83,25 @@ require('catppuccin').setup({
 })
 require('mini.starter').setup()
 vim.opt.termguicolors = true
-require("bufferline").setup{}
+require("bufferline").setup{
+	options = {
+		indicator = {
+			icon = '💀',
+			style = 'icon'
+		},
+		separator_style = { '', '' },
+		diagnostics = "nvim_lsp",
+		offsets = {
+			{
+				filetype = "NvimTree",
+				text = "📁 File Explorer",
+				text_align = "center",
+				separator = false
+			}
+		}
+
+	}
+}
 
 -- You probably also want to set a keymap to toggle aerial
 vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
@@ -234,8 +252,6 @@ vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
   vim.api.nvim_set_keymap('n', '<S-Tab>', ':bp<CR>', { noremap = true, silent = true })
 EOF
 
-colorscheme carbonfox
+"colorscheme carbonfox
 set number
-set laststatus=3
-set cmdheight=0
-"colorscheme catppuccin-mocha catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+colorscheme catppuccin-mocha "catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
