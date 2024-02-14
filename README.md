@@ -1,6 +1,6 @@
-![alt text](https://github.com/lloyd-2014/Neovim-Config/blob/main/neovim%20config%20demo%20final.gif "Neovim Demo Gif")
-
 My super convoluted neovim config.
+
+![alt text](https://github.com/lloyd-2014/Neovim-Config/blob/main/neovim%20config%20demo%20final.gif "Neovim Demo Gif")
 
 Currently supports:
 1. Go
