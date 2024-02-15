@@ -20,6 +20,7 @@ Plug 'https://github.com/joukevandermaas/vim-ember-hbs'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'https://github.com/folke/trouble.nvim'
 call plug#end()
 let g:python3_host_prog = expand('C:\Users\lloyd\AppData\Local\Programs\Python\Python312\python')
 let g:go_highlight_function_calls = 1
@@ -41,10 +42,13 @@ nnoremap <Space>a :AerialNavToggle<CR>
 nnoremap <Space>t :NvimTreeToggle<CR>
 nnoremap <Space>d :GoDef<CR>
 nnoremap <Space>i :GoInfo<CR>
+nnoremap <Space>r :TroubleToggle<CR>
+nnoremap <Space>R :TroubleRefresh<CR>
 
 lua << EOF
 -- Your Lua code here
 require('lualine').setup()
+require('trouble').setup()
 local lspconfig = require("lspconfig")
 local util = require "lspconfig/util"
 local on_attach = function(client, bufnr)
