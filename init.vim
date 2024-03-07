@@ -38,12 +38,15 @@ set signcolumn=no
 set modifiable
 set nowrap
 
-nnoremap <Space>a :AerialNavToggle<CR>
+nnoremap <Space>f :AerialNavToggle<CR>
 nnoremap <Space>t :NvimTreeToggle<CR>
 nnoremap <Space>d :GoDef<CR>
 nnoremap <Space>i :GoInfo<CR>
 nnoremap <Space>r :TroubleToggle<CR>
 nnoremap <Space>R :TroubleRefresh<CR>
+
+nnoremap = <C-u>
+nnoremap - <C-d>
 
 lua << EOF
 -- Your Lua code here
@@ -62,7 +65,7 @@ vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup()
 require'nvim-treesitter.install'.compilers = { "clang", "gcc" }
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "go" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "go", "javascript" },
   sync_install = false,
   auto_install = true,
 }
