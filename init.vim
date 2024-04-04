@@ -21,8 +21,9 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'https://github.com/folke/trouble.nvim'
+Plug 'https://github.com/fatih/vim-go'
 call plug#end()
-let g:python3_host_prog = expand('C:\Users\lloyd\AppData\Local\Programs\Python\Python312\python')
+"let g:python3_host_prog = expand('C:\Users\lloyd\AppData\Local\Programs\Python\Python312\python')
 let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_functions = 1
@@ -47,6 +48,8 @@ nnoremap <Space>R :TroubleRefresh<CR>
 
 nnoremap = <C-u>
 nnoremap - <C-d>
+nnoremap + <C-y>
+nnoremap _ <C-e>
 
 lua << EOF
 -- Your Lua code here
@@ -261,4 +264,4 @@ EOF
 
 "colorscheme carbonfox
 set number
-colorscheme catppuccin-mocha "catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+colorscheme catppuccin-mocha "catppuccin-macchiato catppuccin-mocha catppuccin-latte, catppuccin-frappe, catppuccin-mocha
