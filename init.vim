@@ -38,6 +38,11 @@ set signcolumn=no
 set modifiable
 set nowrap
 
+highlight Normal guibg=none
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+
 nnoremap <Space>f :AerialNavToggle<CR>
 nnoremap <Space>t :NvimTreeToggle<CR>
 nnoremap <Space>d :GoDef<CR>
@@ -81,7 +86,7 @@ require("aerial").setup({
 })
 require('catppuccin').setup({
 	term_colors = true,
-	transparent_background = false,
+	transparent_background = true,
 	color_overrides = {
 		mocha = {
 			base = "#0C0C0C",
